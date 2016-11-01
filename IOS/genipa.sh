@@ -1,29 +1,29 @@
 #!/bin/sh
  
-#²ÎÊýÅÐ¶Ï  
+#å‚æ•°åˆ¤æ–­  
 if [ $# != 1 ];then  
-    echo "ÐèÒªÒ»¸ö²ÎÊý¡£ ²ÎÊýÊÇÓÎÏ·°üµÄÃû×Ó"  
+    echo "éœ€è¦ä¸€ä¸ªå‚æ•°ã€‚ å‚æ•°æ˜¯æ¸¸æˆåŒ…çš„åå­"  
     exit     
 fi  
  
-#UNITY³ÌÐòµÄÂ·¾¶#
+#UNITYç¨‹åºçš„è·¯å¾„#
 UNITY_PATH=/Applications/Unity/Unity.app/Contents/MacOS/Unity
  
-#ÓÎÏ·³ÌÐòÂ·¾¶#
+#æ¸¸æˆç¨‹åºè·¯å¾„#
 PROJECT_PATH=/Users/MOMO/commond
  
-#IOS´ò°ü½Å±¾Â·¾¶#
+#IOSæ‰“åŒ…è„šæœ¬è·¯å¾„#
 BUILD_IOS_PATH=${PROJECT_PATH}/Assets/buildios.sh
  
-#Éú³ÉµÄXcode¹¤³ÌÂ·¾¶#
+#ç”Ÿæˆçš„Xcodeå·¥ç¨‹è·¯å¾„#
 XCODE_PATH=${PROJECT_PATH}/$1
  
-#½«unityµ¼³ö³Éxcode¹¤³Ì#
+#å°†unityå¯¼å‡ºæˆxcodeå·¥ç¨‹#
 $UNITY_PATH -projectPath $PROJECT_PATH -executeMethod ProjectBuild.BuildForIPhone project-$1 -quit
  
-echo "XCODE¹¤³ÌÉú³ÉÍê±Ï"
+echo "XCODEå·¥ç¨‹ç”Ÿæˆå®Œæ¯•"
  
-#¿ªÊ¼Éú³Éipa#
+#å¼€å§‹ç”Ÿæˆipa#
 $BUILD_IOS_PATH $PROJECT_PATH/$1 $1
  
-echo "ipaÉú³ÉÍê±Ï"
+echo "ipaç”Ÿæˆå®Œæ¯•"
