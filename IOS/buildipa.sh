@@ -23,7 +23,7 @@ ipa_name=$2
 build_path=${project_path}/build  
  
 #清理#
-#xcodebuild  clean
+xcodebuild  clean
  
 #编译工程  
 cd $project_path
@@ -33,7 +33,7 @@ cd $project_path
 #xcodebuild DEVELOPMENT_TEAM=863KK7F4EQ ENABLE_BITCODE=NO CODE_SIGN_IDENTITY="${code_sign_identity}" APP_PROFILE="${app_profile_uuid}"|| exit
 
 #xcodebuild DEVELOPMENT_TEAM=863KK7F4EQ ENABLE_BITCODE=NO 
-#xcodebuild DEVELOPMENT_TEAM=863KK7F4EQ ENABLE_BITCODE=NO archive -scheme "Unity-iPhone" -archivePath kol.xcarchive
+xcodebuild DEVELOPMENT_TEAM=863KK7F4EQ ENABLE_BITCODE=NO archive -scheme "Unity-iPhone" -archivePath kol.xcarchive
 #打包 下面代码我是新加的#
 xcodebuild -exportArchive -archivePath kol.xcarchive -exportPath ${build_path}/${ipa_name}.ipa -exportFormat IPA  -exportProvisioningProfile "com.YH.KOL"
 #xcrun -sdk iphoneos PackageApplication -v ${build_path}/${ipa_name}.app -o ${build_path}/${ipa_name}.ipa --sign "$code_sign_identity" --embed "$app_profile_uuid"
