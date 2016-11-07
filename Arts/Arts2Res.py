@@ -5,7 +5,8 @@ import commands;
 
 print "Arts2Res"
 #UNITY_PROJECT_PATH="..";
-UNITY_PROJECT_PATH=sys.argv[1];
+UNITY_PROJECT_PATH=sys.argv[3];
+print UNITY_PROJECT_PATH
 
 UNITY='"C:\Program Files\Unity5.4\Editor\Unity.exe"';
 
