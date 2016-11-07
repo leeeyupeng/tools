@@ -32,5 +32,6 @@ sh $BUILD_IOS_PATH $XCODE_PATH $1
   
 echo "ipa生成完毕"
 
+python upload.py ${XCODE_PATH}/build/$1.ipa $1v$2t$(date +%Y%m%d%H%M%S).ipa
 mv ${XCODE_PATH}/build/$1.ipa ${OUT_PATH}/$1$(date +%Y%m%d%H%M).ipa
 
