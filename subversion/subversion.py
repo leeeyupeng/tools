@@ -33,10 +33,10 @@ while True:
 	os.chdir(Path);
 	print "LastVersion : "+str(lastVersion) + " Version: " + str(Version);
 	if Version > lastVersion:
-		os.system("python " + Script + " " + " ".join(argv));
+		os.system("python " + Script + " " + " ".join(argv) + " " + str(Version))
 		Version = Version;
 		# os.system("python subversion.py " + UNITY_PROJECT_PATH + " " + str(lastVersion) + " " + Script);
 
 	time.sleep(3);
 	
-	#break;
+	break;

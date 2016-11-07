@@ -22,7 +22,7 @@ BUILD_IOS_PATH=${PROJECT_PATH}/tools/IOS/buildipa.sh
 XCODE_PATH=${PROJECT_PATH}/$1
  
 #将unity导出成xcode工程#
-$UNITY_PATH -projectPath $PROJECT_PATH -executeMethod ProjectBuild.BuildForIPhone project-$1 -quit
+$UNITY_PATH -projectPath $PROJECT_PATH -executeMethod ProjectBuildIOS.BuildForIPhone project-$1 -quit
  
 echo "XCODE工程生成完毕"
  
