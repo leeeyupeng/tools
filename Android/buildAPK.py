@@ -21,9 +21,16 @@ ECLIPSE_PROJECT_PATH=PROJECT_PATH
 
 Path = os.getcwd();
 os.chdir( PROJECT_PATH)
+
+if os.path.exists(PROJECT_TARGET):
+	print "exits";
+else:
+	print "not exits";
+	os.makedirs(PROJECT_TARGET)
+	
 print "gen eclipse project";
 print PROJECT_NAME;
-#os.system(UNITY_PATH + " -quit -batchmode -executeMethod ProjectBuildAndroid.BuildForEclipse project-" + PROJECT_TARGET)
+os.system(UNITY_PATH + " -quit -batchmode -executeMethod ProjectBuildAndroid.BuildForEclipse project-" + PROJECT_TARGET)
 os.chdir(Path);
 
 print "gen ipa";
@@ -31,8 +38,16 @@ Path = os.getcwd();
 print os.getcwd()
 os.chdir( ECLIPSE_PROJECT_PATH)
 print os.getcwd()
+	
 os.chdir( PROJECT_TARGET)
 print os.getcwd()
+
+if os.path.exists(PROJECT_NAME):
+	print "exits";
+else:
+	print "not exits";
+	os.makedirs(PROJECT_NAME)
+	
 os.chdir( PROJECT_NAME)
 print os.getcwd()
 
