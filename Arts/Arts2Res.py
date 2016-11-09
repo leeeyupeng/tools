@@ -14,7 +14,7 @@ Path = os.getcwd();
 os.chdir(UNITY_PROJECT_PATH);
 
 # os.system("ls")
-print UNITY+" -quit -batchmode -executeMethod ActorEditor.AutoGen Start";
+print UNITY+" -quit -batchmode -projectPath "" -executeMethod ActorEditor.AutoGen Start";
 os.system(UNITY+" -quit -batchmode -executeMethod ActorEditor.AutoGen");
 print UNITY+" -quit -batchmode -executeMethod ActorEditor.AutoGen  End";
 os.system('cd Assets/Resources/Arts && svn add * --force && svn ci -m "KOL ArtsRes"');
