@@ -32,7 +32,7 @@ print "gen eclipse project";
 print os.getcwd();
 print PROJECT_TARGET
 #quit();
-os.system(UNITY_PATH + " -quit -batchmode -projectPath "" -executeMethod ProjectBuildAndroid.BuildForEclipse project-" + PROJECT_TARGET)
+os.system(UNITY_PATH + " -quit -batchmode -projectPath " + os.getcwd() + " -executeMethod ProjectBuildAndroid.BuildForEclipse project-" + PROJECT_TARGET)
 os.chdir(Path);
 
 print "gen ipa";

@@ -21,7 +21,7 @@ curdir=$PWD
 
 echo "xcode project build start"
 cd $PROJECT_PATH
-$UNITY_PATH  -batchmode -quit -projectPath "" -executeMethod ProjectBuildIOS.BuildForIPhone project-IOS/$1
+$UNITY_PATH  -batchmode -quit -projectPath $PWD -executeMethod ProjectBuildIOS.BuildForIPhone project-IOS/$1
 
 cd $curdir
 echo "XCODE工程生成完毕"
